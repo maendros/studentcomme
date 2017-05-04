@@ -1,7 +1,7 @@
 <?php 
 try {
 
-$con = new PDO('mysql:host=localhost;dbname=ecomm;charset=utf8mb4;', 'root', '');
+$con = new PDO('mysql:host=eu-cdbr-west-01.cleardb.com;dbname=heroku_e9b1067feabf696;charset=utf8mb4;', 'b6eb40152dc814', 'e850bb51');
 $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
  }
