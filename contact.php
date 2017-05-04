@@ -1,8 +1,7 @@
 
 
 <?php 
-session_start();
-   require 'vendor/sendgrid/autoload.php';
+
 
 /*$msg = '';
 //Don't run this unless we're handling a form submission
@@ -61,7 +60,8 @@ EOT;
 <!DOCTYPE html>
 <?php  
 
-
+session_start();
+   require 'vendor/autoload.php';
 include("functions/functions.php"); 
 include("header.php");?>
 		<main>
