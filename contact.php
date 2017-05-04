@@ -14,7 +14,7 @@ if (array_key_exists('email', $_POST)) {
     //Faster and safer than using mail()
     $mail->isSMTP();
     $mail->Host = 'https://studentcomme.herokuapp.com/';
-   
+   $mail->Port = 25;
     //Use a fixed address in your own domain as the from address
     //**DO NOT** use the submitter's address here as it will be forgery
     //and will cause your messages to fail SPF checks
