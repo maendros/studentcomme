@@ -15,7 +15,7 @@ if (array_key_exists('email', $_POST)) {
 $mail->IsSMTP();
 $mail->Host = "smtp.gmail.com";
 $mail->SMTPAuth = true;
-$mail->SMTPSecure = "ssl";
+$mail->SMTPSecure = "tls";
                        
 $mail->Port = "587";
    
