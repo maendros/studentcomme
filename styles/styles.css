@@ -1,0 +1,297 @@
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+/* Animation.css*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+
+	
+
+} /* reset css*/ 
+html{
+	  
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/* display products css */
+
+body{
+	background: #092756;
+
+    
+
+
+}
+
+.main-wrapper{
+	width: 1000px;
+	height:auto;
+	margin:auto;
+
+}
+header{
+	width: 1000px;
+	height:100px;
+	margin:auto;
+
+}
+#logo{
+	float:left;
+	height:100px;
+
+}
+#banner{
+	float:right;
+	height:100px;
+}
+.menu-bar{
+	width: 1000px;
+	height:50px;
+	background: #3c43a4; 
+}
+#menu{
+	padding: 0;
+	margin: 0;
+	line-height: 40px;
+}
+#menu li{
+	list-style: none;
+	display: inline;
+	float: left
+
+}
+#menu a{
+	text-decoration:none;
+	color: white;
+	padding: 8px;
+	margin: 15px;
+	font-size: 18px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#menu a:hover{
+	color:orange;
+	font-weight: bolder;
+}
+
+#form{
+	float: right;
+	padding-right: 10px;
+	line-height: 40px;
+}
+
+main{
+	width: 1000px;
+	height:800px;
+	margin:auto;
+	
+
+}
+section{
+	width: 800px;
+
+	float:right;
+
+}
+aside{
+	width: 200px;
+	
+	background: #004de6;
+	float:left;
+	font-size: 20px;
+	text-align: center;
+
+}
+.sidebar-title{
+	background: white;
+	color:black;
+	font-size: 22px;
+	font-family: arial;
+
+}
+#side-list{
+	padding: 0;
+
+}
+#side-list li{
+	list-style: none;
+	display: block;
+	margin: 7px;
+}
+#side-list a{
+	color: white;
+	padding: 8px;
+	text-align: center;
+	text-decoration:none;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#side-list a:hover{
+	color:orange;
+	font-weight: bolder;
+}
+
+footer{
+	
+  background-color:#FFF;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    height: 50px;
+    padding:10px;
+    font-family:'discoregular';
+    display: block;
+    overflow:auto;
+    text-align:center;
+    float:left;
+    margin-top:50px;
+
+}
+/**testproducts**/
+.productbox {
+    background-color:#ffffff;
+	padding:10px;
+	margin-bottom:10px;
+	-webkit-box-shadow: 0 8px 6px -6px  #999;
+	   -moz-box-shadow: 0 8px 6px -6px  #999;
+	        box-shadow: 0 8px 6px -6px #999;
+}
+
+.producttitle {
+    font-weight:bold;
+	padding:5px 0 5px 0;
+}
+
+.productprice {
+	border-top:1px solid #dadada;
+	padding-top:5px;
+}
+
+.pricetext {
+	font-weight:bold;
+	font-size:1.4em;
+}
+
+
+/*********************************************
+					PRODUCTS
+/*********************************************/
+div#product_box {
+     width: 60%!important; 
+}
+.product{
+	border: 1px solid #dddddd;
+	height: 60%;
+
+}
+
+.product>img{
+	max-width: 100%;
+	
+}
+
+.product-rating{
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+
+.product-title{
+	font-size: 20px;
+}
+
+.product-desc{
+	font-size: 14px;
+}
+
+.product-price{
+	font-size: 22px;
+	float: right;
+}
+
+.product-stock{
+	color: #74DF00;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.product-info{
+		margin-top: 50px;
+}
+
+/*********************************************
+					VIEW
+*********************************************/
+
+.content-wrapper {
+	max-width: 1140px;
+	background: #fff;
+	margin: 0 auto;
+	margin-top: 25px;
+	margin-bottom: 10px;
+	border: 0px;
+	border-radius: 0px;
+}
+
+.container-fluid{
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.view-wrapper {
+	float: right;
+	max-width: 70%;
+	margin-top: 25px;
+}
+
+.container {
+	padding-left: 0px;
+	padding-right: 0px;
+	max-width: 100%;
+}
+
+
+
+.service-image-left {
+	padding-right: 50px;
+}
+
+.service-image-right {
+	padding-left: 50px;
+}
+
+.service-image-left > center > img,.service-image-right > center > img{
+	max-height: 155px;
+}
+/***********************
+	Contact
+*********************************/
+.jumbotron {
+background: #358CCE;
+color: #FFF;
+border-radius: 0px;
+}
+.jumbotron-sm { padding-top: 24px;
+padding-bottom: 24px; }
+.jumbotron small {
+color: #FFF;
+}
+.h1 small {
+font-size: 24px;
+}
+
+
