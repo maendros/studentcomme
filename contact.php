@@ -59,7 +59,7 @@ EOT;
 */?>
 <!DOCTYPE html>
 <?php  
-namespace SendGrid;
+
 session_start();
    require __DIR__ . '/vendor/autoload.php';
 include("functions/functions.php"); 
@@ -141,6 +141,7 @@ $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
 $apiKey = getenv('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');
 $sg = new \SendGrid($apiKey);
+
 
 $response = $sg->client->mail()->send()->post($mail);
 echo $response->statusCode();
