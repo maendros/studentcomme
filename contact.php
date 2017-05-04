@@ -71,7 +71,7 @@ include("header.php");?>
             
             $headers = "MIME-Version: 1.0" . "\r\n";
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            $headers .= 'From: <$sender_email>' . "\r\n";
+            $headers .= "From: <$sender_email>" . "\r\n";
             
             $subject = "support";
             
@@ -79,9 +79,14 @@ include("header.php");?>
             
             mail($support_email,$subject,$message,$headers);
 
-            
+                    echo "<script>alert('Tο email σας εστάλη')</script>";
+
+
+
+    echo "<script>window.open('index.php','_self')</script>"; 
         
     } 
+
 
  ?>
 
