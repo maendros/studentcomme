@@ -10,7 +10,7 @@
 
 	<h2>Η πληρωμή ακυρώθηκε!</h2>
 	<h3>Η πληρωμή σας ακυρώθηκε. Μεταβείτε στο κατάστημα και προσπαθήστε ξανά</h3>
-	<h3><a href="https://ecomms-stud.000webhostapp.com/">ΠΙΣΩ</a></h3>
+	<h3><a href="https://studentcomme.herokuapp.com/">ΠΙΣΩ</a></h3>
 
 
 

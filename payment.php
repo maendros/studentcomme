@@ -77,8 +77,8 @@
 
 		<input type="hidden" name="currency_code" value="EUR">
 			<!--these are the return pages after purchase-->
-			<input type="hidden" name="return" value="https://ecomms-stud.000webhostapp.com/paypal_success.php"/>
-		<input type="hidden" name="cancel_return" value="https://ecomms-stud.000webhostapp.com/paypal_cancel.php"/>
+			<input type="hidden" name="return" value="https://studentcomme.herokuapp.com/paypal_success.php"/>
+		<input type="hidden" name="cancel_return" value="https://studentcomme.herokuapp.com/paypal_cancel.php"/>
 			<input type="image" name="submit" border="0"
 		src="paypal_button.png"
 		alt="PayPal - The safer, easier way to pay online">

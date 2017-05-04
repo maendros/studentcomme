@@ -101,14 +101,14 @@ session_start();
 		
 			$headers = "MIME-Version: 1.0" . "\r\n";
 			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-			$headers .= 'From: <sales@ecomm-study.com>' . "\r\n";
+			$headers .= 'From: <sales@studentcomm.com>' . "\r\n";
 			
 			$subject = "Λεπτομέρεις Πληρωμής";
 			
 			$message = "<html> 
 			<p>
 			
-			Γεια σας <b style='color:blue;'>$c_name</b> έχετε παραγγείλει προιόντα από τον ιστότοπο ecomms-stud.com, παρακαλώ βρείτε τις λεπτομέρειες της πληρωμής, η παραγγελία σας θα επεξεργαστεί σύντομα. Σας ευχαριστούμε!</p>
+			Γεια σας <b style='color:blue;'>$c_name</b> έχετε παραγγείλει προιόντα από τον ιστότοπο studentcomme, παρακαλώ βρείτε τις λεπτομέρειες της πληρωμής, η παραγγελία σας θα επεξεργαστεί σύντομα. Σας ευχαριστούμε!</p>
 			
 				<table width='600' align='center' bgcolor='#FFCC99' border='2'>
 			
@@ -134,7 +134,7 @@ session_start();
 				
 				<h3>Παρακαλώ πηγαίνετε στο λογαριασμό σας και δείτε τις λεπτομέρειες της παραγγελίας σας!</h3>
 				
-				<h2> <a href='https://ecomms-stud.000webhostapp.com/customer/my_account.php'>Πατήστε εδώ</a> να συνδεθείτε στο λογαριασμό σας</h2>
+				<h2> <a href='https://studentcomme.herokuapp.com/customer/my_account.php'>Πατήστε εδώ</a> να συνδεθείτε στο λογαριασμό σας</h2>
 				
 				<h3> Ευχαριστούμε για την παραγγελία </h3>
 				
@@ -147,7 +147,7 @@ session_start();
 						}
 		}
 				echo "<h2>Welcome:" . $_SESSION['customer_email']. "<br>" . "Η πληρωμή σας ήταν επιτυχής!  Ελεξτε το spam folder σας</h2>";
-		echo "<a href='https://ecomms-stud.000webhostapp.com/customer/my_account.php'>Πίσω στο λογαριασμό σας</a>";
+		echo "<a href='https://studentcomme.herokuapp.com/customer/my_account.php'>Πίσω στο λογαριασμό σας</a>";
 		//removing the products from cart
 				$empty_cart=$con->prepare("DELETE FROM cart");
 		$empty_cart->execute();

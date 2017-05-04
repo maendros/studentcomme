@@ -96,7 +96,7 @@ include("header.php");?>
                     <tr>
                         <td class='col-sm-8 col-md-6'>
                         <div class='media'>
-                            <a class='thumbnail pull-left' href='#'> <img class='media-object' src='admin/product_images/<?php echo $product_image; ?>' style='width: 72px; height: 72px;''> </a>
+                            <a class='thumbnail pull-left' href='admin/product_images/<?php echo $product_image; ?>'> <img class='media-object' src='admin/product_images/<?php echo $product_image; ?>' style='width: 72px; height: 72px;''> </a>
                             <div class='media-body'>
                                 <h4 class='media-heading'><a href='#'><?php echo $product_title; ?></a></h4>
                             
