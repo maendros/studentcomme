@@ -2,8 +2,8 @@
 
 <?php 
 session_start();
-   require ("vendor/autoload.php");
-   require("vendor/sendgrid-php/sendgrid-php.php");
+   require 'vendor/sendgrid/autoload.php';
+
 /*$msg = '';
 //Don't run this unless we're handling a form submission
 if (array_key_exists('email', $_POST)) {
