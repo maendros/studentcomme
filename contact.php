@@ -15,9 +15,9 @@ if (array_key_exists('email', $_POST)) {
 $mail->IsSMTP();
 $mail->Host = "smtp.gmail.com";
 $mail->SMTPAuth = true;
-$mail->SMTPSecure = "ssl"
+$mail->SMTPSecure = "tls";
                        
-$mail->Port = "465";
+$mail->Port = "587";
     //Use a fixed address in your own domain as the from address
     //**DO NOT** use the submitter's address here as it will be forgery
     //and will cause your messages to fail SPF checks
