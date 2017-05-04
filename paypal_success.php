@@ -94,17 +94,7 @@ session_start();
 				
 
 		$_SESSION['total']=0;
-				
-				
 
-		
-		
-			$headers = "MIME-Version: 1.0" . "\r\n";
-			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-			$headers .= 'From: <sales@studentcomm.com>' . "\r\n";
-			
-			$subject = "Λεπτομέρεις Πληρωμής";
-			
 			$message = "<html> 
 			<p>
 			
@@ -141,8 +131,61 @@ session_start();
 			</html>
 			
 			";
+				
+				
+    date_default_timezone_set('Etc/UTC');
+   require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
+    //Create a new PHPMailer instance
+    $mail = new PHPMailer;
+    //Tell PHPMailer to use SMTP - requires a local mail server
+    //Faster and safer than using mail()
+$mail->IsSMTP();
+$mail->Host = "smtp.gmail.com";
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = "tls";
+                       
+$mail->Port = "587";
+   
+    //Use a fixed address in your own domain as the from address
+    //**DO NOT** use the submitter's address here as it will be forgery
+    //and will cause your messages to fail SPF checks
+
+    $mail->setFrom('studentcomme@gmail.com', 'studemt');
+    //Send the message to yourself, or whoever should receive contact for submissions
+    $mail->addAddress($c_email);
+    //Put the submitter's address in a reply-to header
+    //This will fail if the address provided is invalid,
+    //in which case we should ignore the whole request
+    if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
+        $mail->Subject = 'Λεπτομέρεις Πληρωμής';
+        //Keep it simple - don't use HTML
+        $mail->isHTML(true);
+        //Build a simple message body
+        $mail->Body = <<<EOT
+Email: {$_POST['email']}
+Name: {$_POST['name']}
+Message: {$message}
+EOT;
+        //Send the message, check for errors
+        if (!$mail->send()) {
+            //The reason for failing to send will be in $mail->ErrorInfo
+            //but you shouldn't display errors to users - process the error, log it on your server.
+            echo $mail->ErrorInfo; 
+            $msg = 'Sorry, something went wrong. Please try again later.';
+        } else {
+            $msg = 'Message sent! Thanks for contacting us.';
+        }
+    } else {
+        $msg = 'Invalid email address, message ignored.';
+    }
+		
+		
+
 			
-			mail($c_email,$subject,$message,$headers);
+		
+
+			
+		
 			
 						}
 		}

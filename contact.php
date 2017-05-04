@@ -14,10 +14,12 @@ if (array_key_exists('email', $_POST)) {
     //Faster and safer than using mail()
 $mail->IsSMTP();
 $mail->Host = "smtp.gmail.com";
+$mail->Username = 'studentcomme@gmail.com';                 // SMTP username
+$mail->Password = 'tutorftw'; 
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = "tls";
                        
-$mail->Port = "25";
+$mail->Port = "587";
    
     //Use a fixed address in your own domain as the from address
     //**DO NOT** use the submitter's address here as it will be forgery
