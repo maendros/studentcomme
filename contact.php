@@ -129,11 +129,11 @@ include("header.php");?>
     $sender_email=$_POST['email'];
     $msg=$_POST['message'];
     $support_email="studentcomme@gmail.com";// send all items to that email
-    $from = new SendGrid\Email(null, $sender_email);
+    $from = new SendGrid(null, $sender_email);
 $subject = "Support for studentcomme";
-$to = new SendGrid\Email(null, $support_email);
-$content = new SendGrid\Content("text/plain", $msg );
-$mail = new SendGrid\Mail($from, $subject, $to, $content);
+$to = new SendGrid(null, $support_email);
+$content = new SendGrid("text/plain", $msg );
+$mail = new SendGrid($from, $subject, $to, $content);
 
 $apiKey = getenv('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');
 $sg = new \SendGrid($apiKey);
