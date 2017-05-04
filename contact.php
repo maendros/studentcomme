@@ -7,7 +7,7 @@ $msg = '';
 //Don't run this unless we're handling a form submission
 if (array_key_exists('email', $_POST)) {
     date_default_timezone_set('Etc/UTC');
-   require 'vendor/phpmailer/phpmailer/autoload.php';
+   require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
     //Create a new PHPMailer instance
     $mail = new PHPMailer;
     //Tell PHPMailer to use SMTP - requires a local mail server
@@ -17,7 +17,7 @@ $mail->Host = "smtp.gmail.com";
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = "tls";
                        
-$mail->Port = "587";
+$mail->Port = "465";
    
     //Use a fixed address in your own domain as the from address
     //**DO NOT** use the submitter's address here as it will be forgery
