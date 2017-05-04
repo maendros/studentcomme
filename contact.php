@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <?php 
 session_start();
@@ -97,8 +98,8 @@ include("header.php");?>
 
     $msg = '';
 //Don't run this unless we're handling a form submission
-if (array_key_exists('email', $_POST)) {
-    date_default_timezone_set('Etc/UTC');
+if (isset($_POST['send'])) {
+   
    
     //Create a new PHPMailer instance
     $mail = new PHPMailer;
