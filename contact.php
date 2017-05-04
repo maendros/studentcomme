@@ -7,7 +7,7 @@ $msg = '';
 //Don't run this unless we're handling a form submission
 if (array_key_exists('email', $_POST)) {
     date_default_timezone_set('Etc/UTC');
-    require 'PHPMailerAutoload.php';
+   require 'vendor/autoload.php';
     //Create a new PHPMailer instance
     $mail = new PHPMailer;
     //Tell PHPMailer to use SMTP - requires a local mail server
