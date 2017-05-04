@@ -61,7 +61,7 @@ EOT;
 <?php  
 
 session_start();
-   require 'vendor/autoload.php';
+   require __DIR__ . '/vendor/autoload.php';
 include("functions/functions.php"); 
 include("header.php");?>
 		<main>
