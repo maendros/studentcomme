@@ -1,3 +1,4 @@
+  <div class="table-responsive" style="background: #fff;">
 <table width="795" align="center" bgcolor="pink"> 
 
 	
@@ -60,4 +61,4 @@ $get_order =$con->prepare("select * from orders");
 	</tr>
 	<?php } ?>
 </table>
-
+</div>

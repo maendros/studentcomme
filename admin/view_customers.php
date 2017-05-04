@@ -1,4 +1,4 @@
-<div class="table-responsive">
+  <div class="table-responsive" style="background: #fff;">
 <table width="795" align="center" bgcolor="pink"> 
 
 	
