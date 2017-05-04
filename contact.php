@@ -2,7 +2,7 @@
 
 <?php 
 session_start();
-   require 'vendor/autoload.php'
+   require ("vendor/autoload.php");
    require("vendor/sendgrid-php/sendgrid-php.php");
 /*$msg = '';
 //Don't run this unless we're handling a form submission
