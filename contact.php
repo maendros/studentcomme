@@ -1,13 +1,13 @@
 
 
 <?php 
-//session_start();
+session_start();
  
 $msg = '';
 //Don't run this unless we're handling a form submission
 if (array_key_exists('email', $_POST)) {
     date_default_timezone_set('Etc/UTC');
-    require '../PHPMailerAutoload.php';
+    require 'PHPMailerAutoload.php';
     //Create a new PHPMailer instance
     $mail = new PHPMailer;
     //Tell PHPMailer to use SMTP - requires a local mail server
@@ -56,7 +56,7 @@ EOT;
 
 include("functions/functions.php"); 
 include("header.php");?>
-		<main >
+		<main>
 
 		
 <div class="jumbotron jumbotron-sm">
