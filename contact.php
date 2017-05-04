@@ -17,7 +17,7 @@ $mail->Host = "smtp.gmail.com";
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = "tls";
                        
-$mail->Port = "465";
+$mail->Port = "25";
    
     //Use a fixed address in your own domain as the from address
     //**DO NOT** use the submitter's address here as it will be forgery
