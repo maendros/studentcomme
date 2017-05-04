@@ -19,7 +19,7 @@ $mail->Password = 'tutorftw';
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = "tls";
                        
-$mail->Port = "587";
+$mail->Port = "465";
    
     //Use a fixed address in your own domain as the from address
     //**DO NOT** use the submitter's address here as it will be forgery
