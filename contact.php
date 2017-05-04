@@ -1,8 +1,8 @@
 
 
 <?php 
-session_start();
- */
+//session_start();
+ 
 $msg = '';
 //Don't run this unless we're handling a form submission
 if (array_key_exists('email', $_POST)) {
@@ -22,7 +22,7 @@ if (array_key_exists('email', $_POST)) {
     $sender_email=$_POST['email'];
     $mail->setFrom($sender_email, $name);
     //Send the message to yourself, or whoever should receive contact for submissions
-    $mail->addAddress('studentcomme@gmail.com', 'studemt test');
+    $mail->addAddress('studentcomme@gmail.com');
     //Put the submitter's address in a reply-to header
     //This will fail if the address provided is invalid,
     //in which case we should ignore the whole request
