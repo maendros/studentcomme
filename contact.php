@@ -14,7 +14,9 @@ if (array_key_exists('email', $_POST)) {
     //Faster and safer than using mail()
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
-   $mail->Port = 25;
+ $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;                                    // TCP port to connect to
+
     //Use a fixed address in your own domain as the from address
     //**DO NOT** use the submitter's address here as it will be forgery
     //and will cause your messages to fail SPF checks
