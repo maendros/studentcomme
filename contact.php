@@ -13,7 +13,7 @@ if (array_key_exists('email', $_POST)) {
     //Tell PHPMailer to use SMTP - requires a local mail server
     //Faster and safer than using mail()
     $mail->isSMTP();
-    $mail->Host = 'https://studentcomme.herokuapp.com/';
+    $mail->Host = 'smtp.gmail.com';
    $mail->Port = 25;
     //Use a fixed address in your own domain as the from address
     //**DO NOT** use the submitter's address here as it will be forgery
