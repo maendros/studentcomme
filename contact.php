@@ -12,11 +12,12 @@ if (array_key_exists('email', $_POST)) {
     $mail = new PHPMailer;
     //Tell PHPMailer to use SMTP - requires a local mail server
     //Faster and safer than using mail()
-    $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
- $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                                    // TCP port to connect to
-
+$mail->IsSMTP();
+$mail->Host = "smtp.gmail.com";
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = "ssl"
+                       
+$mail->Port = "465";
     //Use a fixed address in your own domain as the from address
     //**DO NOT** use the submitter's address here as it will be forgery
     //and will cause your messages to fail SPF checks
