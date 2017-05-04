@@ -13,19 +13,21 @@ if (array_key_exists('email', $_POST)) {
     //Tell PHPMailer to use SMTP - requires a local mail server
     //Faster and safer than using mail()
     $mail->isSMTP();
-    $mail->Host = 'localhost';
-    $mail->Port = 25;
+    $mail->Host = 'https://studentcomme.herokuapp.com/';
+   
     //Use a fixed address in your own domain as the from address
     //**DO NOT** use the submitter's address here as it will be forgery
     //and will cause your messages to fail SPF checks
-    $mail->setFrom('from@example.com', 'First Last');
+            $name=$_POST['name'];
+    $sender_email=$_POST['email'];
+    $mail->setFrom($sender_email, $name);
     //Send the message to yourself, or whoever should receive contact for submissions
-    $mail->addAddress('whoto@example.com', 'John Doe');
+    $mail->addAddress('studentcomme@gmail.com', 'studemt test');
     //Put the submitter's address in a reply-to header
     //This will fail if the address provided is invalid,
     //in which case we should ignore the whole request
     if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
-        $mail->Subject = 'PHPMailer contact form';
+        $mail->Subject = 'Studentcomm support';
         //Keep it simple - don't use HTML
         $mail->isHTML(false);
         //Build a simple message body
