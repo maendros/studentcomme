@@ -59,7 +59,7 @@ EOT;
 */?>
 <!DOCTYPE html>
 <?php  
-
+namespace SendGrid;
 session_start();
    require __DIR__ . '/vendor/autoload.php';
 include("functions/functions.php"); 
@@ -129,6 +129,10 @@ include("header.php");?>
     $sender_email=$_POST['email'];
     $msg=$_POST['message'];
     $support_email="studentcomme@gmail.com";// send all items to that email
+
+
+
+    //sendgrid api
     $from = new SendGrid\Email(null, $sender_email);
 $subject = "Support for studentcomme";
 $to = new SendGrid\Email(null, $support_email);
