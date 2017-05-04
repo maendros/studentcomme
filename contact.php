@@ -128,7 +128,7 @@ include("header.php");?>
         $name=$_POST['name'];
     $sender_email=$_POST['email'];
     $msg=$_POST['message'];
-    $support_email="studentcomme@gmail.com ";// send all items to that email
+    $support_email="studemtcomme@gmail.com ";// send all items to that email
     $from = new SendGrid\Email(null, $sender_email);
 $subject = "Support for studentcomme";
 $to = new SendGrid\Email(null, $support_email);
