@@ -2,12 +2,13 @@
 
 <?php 
 session_start();
- 
-$msg = '';
+   require 'vendor/autoload.php'
+   require("vendor/sendgrid-php/sendgrid-php.php");
+/*$msg = '';
 //Don't run this unless we're handling a form submission
 if (array_key_exists('email', $_POST)) {
     date_default_timezone_set('Etc/UTC');
-   require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
+
     //Create a new PHPMailer instance
     $mail = new PHPMailer;
     //Tell PHPMailer to use SMTP - requires a local mail server
@@ -56,7 +57,7 @@ EOT;
     }
 }
 
-?>
+*/?>
 <!DOCTYPE html>
 <?php  
 
@@ -72,9 +73,7 @@ include("header.php");?>
             <div class="col-sm-12 col-lg-12">
                 <h1 class="h1">
                    <small> Επικοινωνείστε μαζί  μας </small></h1>
-                   <?php if (!empty($msg)) {
-    echo "<h2>$msg</h2>";
-} ?>
+                  
             </div>
         </div>
     </div>
@@ -123,3 +122,30 @@ include("header.php");?>
 
 			
 	   <?php include("footer.php"); ?>
+       <?php 
+
+   if (isset($_POST['send'])) {
+        $name=$_POST['name'];
+    $sender_email=$_POST['email'];
+    $msg=$_POST['message'];
+    $support_email="studentcomme@gmail.com ";// send all items to that email
+    $from = new SendGrid\Email(null, $sender_email);
+$subject = "Support for studentcomme";
+$to = new SendGrid\Email(null, $support_email);
+$content = new SendGrid\Content("text/plain", $msg );
+$mail = new SendGrid\Mail($from, $subject, $to, $content);
+
+$apiKey = getenv('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');
+$sg = new \SendGrid($apiKey);
+
+$response = $sg->client->mail()->send()->post($mail);
+echo $response->statusCode();
+echo $response->headers();
+echo $response->body();
+            
+  
+
+            
+        
+    } 
+        ?>
