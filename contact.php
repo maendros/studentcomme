@@ -139,7 +139,7 @@ $to = new SendGrid\Email(null, $support_email);
 $content = new SendGrid\Content("text/plain", $msg );
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-$apiKey = getenv('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');
+$apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 
 
