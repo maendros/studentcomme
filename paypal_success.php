@@ -158,7 +158,7 @@ $response = $sg->client->mail()->send()->post($mail);
 			
 						}
 		}
-				echo "<h2>Welcome:" . $_SESSION['customer_email']. "<br>" . "Η πληρωμή σας ήταν επιτυχής!  Ελεξτε το spam folder σας</h2>";
+				echo "<h2>Welcome:" . $_SESSION['customer_email']. "<br>" . "Η πληρωμή σας ήταν επιτυχής! </h2>";
 		echo "<a href='https://studentcomme.herokuapp.com/customer/my_account.php'>Πίσω στο λογαριασμό σας</a>";
 		//removing the products from cart
 				$empty_cart=$con->prepare("DELETE FROM cart");
