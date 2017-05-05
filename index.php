@@ -25,7 +25,7 @@ include("header.php");?>
 						 total_price(); // else echo total price  from function/functions.php file. 
 					} ?>  €  <a href="cart.php"><span class="fa fa-shopping-cart"></span></a></mark> <?php 
 				if (!isset($_SESSION['customer_email'])) { //based on login or not
-					echo "<a href='products.php' class='btn btn-primary' role='button'> Συνδεθείτε</a>";// logint
+					echo "<a href='checkout.php' class='btn btn-primary' role='button'> Συνδεθείτε</a>";// logint
 				}else{
 
 					echo "<a href='logout.php' class='btn btn-primary' role='button'> Αποσυνδεθείτε</a>";	// or logout
