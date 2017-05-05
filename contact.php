@@ -132,22 +132,35 @@ include("header.php");?>
 
 
 
-    //sendgrid api
-    $from = new SendGrid\Email(null, $sender_email);
-$subject = "Support for studentcomme";
-$to = new SendGrid\Email(null, $support_email);
-$content = new SendGrid\Content("text/plain", $msg );
-$mail = new SendGrid\Mail($from, $subject, $to, $content);
+$request_body = json_decode('{
+  "personalizations": [
+    {
+      "to": [
+        {
+          "email": "$support_email"
+        }
+      ],
+      "subject": "Hello World from the SendGrid PHP Library!"
+    }
+  ],
+  "from": {
+    "email": "$sender_email"
+  },
+  "content": [
+    {
+      "type": "text/plain",
+      "value": "$msg"
+    }
+  ]
+}');
 
 $apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 
-
-$response = $sg->client->mail()->send()->post($mail);
+$response = $sg->client->mail()->send()->post($request_body);
 echo $response->statusCode();
-echo $response->headers();
 echo $response->body();
-            
+echo $response->headers();
   
 
             
