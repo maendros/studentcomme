@@ -3,9 +3,9 @@ session_start();
    require __DIR__ . '/vendor/autoload.php';
 ?>
 
+<!DOCTYPE html>
 
 
-<html>
 	<head>
 		<title>Επιτυχής Πληρωμή!</title>
 	</head>
@@ -96,7 +96,7 @@ session_start();
 
 		$_SESSION['total']=0;
 
-			$message = "<html> 
+			$message = "<!DOCTYPE html><body>
 			<p>
 			
 			Γεια σας <b style='color:blue;'>$c_name</b> έχετε παραγγείλει προιόντα από τον ιστότοπο studentcomme, παρακαλώ βρείτε τις λεπτομέρειες της πληρωμής, η παραγγελία σας θα επεξεργαστεί σύντομα. Σας ευχαριστούμε!</p>
@@ -128,7 +128,7 @@ session_start();
 				<h2> <a href='https://studentcomme.herokuapp.com/customer/my_account.php'>Πατήστε εδώ</a> να συνδεθείτε στο λογαριασμό σας</h2>
 				
 				<h3> Ευχαριστούμε για την παραγγελία </h3>
-				
+				</body>
 			</html>
 			
 			";
@@ -137,7 +137,7 @@ $sender_email="studentcomme@gmail.com";
     $from = new SendGrid\Email(null, $sender_email);
 $subject = "Λεπτομέρειες Πληρωμής";
 $to = new SendGrid\Email(null, $c_email);
-$content = new SendGrid\Content("text/plain", $message );
+$content = new SendGrid\Content("text/html", $message );
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
 $apiKey = getenv('SENDGRID_API_KEY');
@@ -145,9 +145,9 @@ $sg = new \SendGrid($apiKey);
 
 
 $response = $sg->client->mail()->send()->post($mail);
-echo $response->statusCode();
-echo $response->headers();
-echo $response->body();
+//echo $response->statusCode();
+//echo $response->headers();
+//echo $response->body();
 		
 
 			
